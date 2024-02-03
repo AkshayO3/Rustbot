@@ -6,9 +6,6 @@ use leptos::*;
 use leptos_meta::*;
 
 mod components;
-mod chat_area;
-mod type_area;
-
 use components::chat_area::ChatArea;
 use components::type_area::TypeArea;
 

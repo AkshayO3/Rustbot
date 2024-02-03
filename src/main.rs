@@ -7,7 +7,6 @@ pub mod model;
 #[cfg(feature = "ssr")]
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
-    // debug logging, disable for prod
     std::env::set_var("RUST_LOG", "debug");
     env_logger::init();
 
@@ -19,7 +18,6 @@ async fn main() -> std::io::Result<()> {
 
     let conf = get_configuration(None).await.unwrap();
     let addr = conf.leptos_options.site_addr;
-    // Generate the list of routes in your Leptos App
     let routes = generate_route_list(|| view! { <App/> });
 
     #[get("/style.css")]

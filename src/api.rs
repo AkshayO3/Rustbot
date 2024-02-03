@@ -47,9 +47,9 @@ cfg_if! {
         fn session_setup(model: Arc<Llama>) -> llm::InferenceSession {
             let persona = "A chat between a human and an assistant.";
             let history = format!(
-         "{character_name} : How may I help you today?\n\
-          {user_name} : Who brought you into existence?\n\
-          {character_name} : I was developed by Akshay Bhandari and am based on Rustformers llm."
+         "{CHARACTER_NAME} : How may I help you today?\n\
+          {USER_NAME} : Who brought you into existence?\n\
+          {CHARACTER_NAME} : I was developed by Akshay Bhandari and am based on Rustformers llm."
 );
             let mut session = model.start_session(Default::default());
             session
